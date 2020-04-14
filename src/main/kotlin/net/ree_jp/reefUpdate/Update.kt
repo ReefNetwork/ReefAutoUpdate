@@ -21,7 +21,7 @@ class Update {
         con.addRequestProperty("User-Agent", "Mozilla/5.0")
 
         DataInputStream(con.getInputStream()).use { `in` ->
-            DataOutputStream(FileOutputStream(name)).use { out ->
+            DataOutputStream(FileOutputStream("plugins//$name")).use { out ->
                 val buf = ByteArray(8192)
                 var len = 0
 
@@ -38,7 +38,6 @@ class Update {
                 out.flush()
             }
         }
-
         Server.getInstance().logger.info("$name - $size bytes")
     }
 
