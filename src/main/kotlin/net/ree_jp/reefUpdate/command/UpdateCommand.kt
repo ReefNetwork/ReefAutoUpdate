@@ -22,6 +22,7 @@ class UpdateCommand(name: String, description: String): Command(name, descriptio
             Server.getInstance().logger.info(TextFormat.DARK_GRAY.toString() + ">> " + TextFormat.RESET +"run")
             Update().run()
             Server.getInstance().logger.info(TextFormat.GREEN.toString() + ">> " + TextFormat.RESET +"complete")
+            Server.getInstance().shutdown()
         }else if (sender is Player) sender.sendMessage(TextFormat.DARK_GRAY.toString() + ">> " + TextFormat.RESET + "Partially shut down the system and update the plugin from gitlab...")
         return true
     }
