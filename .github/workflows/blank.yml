@@ -12,6 +12,7 @@ jobs:
     
     - uses: actions/checkout@v2
     - uses: actions/setup-java@v1
+    - uses: actions/upload-artifact@v1
       with:
         java-version: 11
 
@@ -19,3 +20,8 @@ jobs:
       run: |
         chmod +x gradlew
         ./gradlew shadow
+        
+    - name: upload
+      with:
+        name: ReefAutoUpdate.jar
+        path: build/libs/*.jar
