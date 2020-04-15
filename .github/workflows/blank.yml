@@ -15,7 +15,7 @@ jobs:
       with:
         java-version: 11
 
-    - name: Run a multi-line script
+    - name: run build
       run: |
         chmod +x gradlew
         ./gradlew shadow
@@ -23,4 +23,4 @@ jobs:
     - uses: actions/upload-artifact@v1
       with:
         name: ReefAutoUpdate.jar
-        path: build/libs/*.jar
+        path: build/libs
