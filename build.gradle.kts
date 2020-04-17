@@ -43,5 +43,5 @@ nukkit {
     author = "Ree-jp"
     description = "ReefAutoUpdatePlugin"
     website = "https://github.com/ReefNetwork/"
-    version = "1.0.0"
+    version = "1.0.1"
 }
