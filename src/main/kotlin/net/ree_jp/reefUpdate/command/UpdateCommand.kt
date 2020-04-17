@@ -6,6 +6,7 @@ import cn.nukkit.command.Command
 import cn.nukkit.command.CommandSender
 import cn.nukkit.command.ConsoleCommandSender
 import cn.nukkit.utils.TextFormat
+import kotlinx.coroutines.runBlocking
 import net.ree_jp.reefUpdate.Update
 import net.ree_jp.reefUpdate.event.EventListener
 
@@ -20,7 +21,7 @@ class UpdateCommand(name: String, description: String): Command(name, descriptio
             Server.getInstance().logger.info(TextFormat.DARK_GRAY.toString() + ">> " + TextFormat.RESET +"processing...")
             Thread.sleep(3000)
             Server.getInstance().logger.info(TextFormat.DARK_GRAY.toString() + ">> " + TextFormat.RESET +"run")
-            Update().run()
+            runBlocking { Update().run() }
             Server.getInstance().logger.info(TextFormat.GREEN.toString() + ">> " + TextFormat.RESET +"complete")
             Server.getInstance().shutdown()
         }else if (sender is Player) sender.sendMessage(TextFormat.DARK_GRAY.toString() + ">> " + TextFormat.RESET + "Partially shut down the system and update the plugin from gitlab...")
