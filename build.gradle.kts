@@ -21,7 +21,7 @@ dependencies {
     compileOnly("cn.nukkit:nukkit:1.0-SNAPSHOT")
     testCompileOnly("cn.nukkit:nukkit:1.0-SNAPSHOT")
     implementation(kotlin("stdlib-jdk8"))
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5")
 }
 
 configure<JavaPluginConvention> {
