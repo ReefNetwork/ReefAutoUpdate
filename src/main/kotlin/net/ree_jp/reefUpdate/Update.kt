@@ -12,7 +12,7 @@ import java.net.URL
 class Update {
 
     fun run() {
-        val url =  URL("https://gitlab.com/Ree-jp/ReefServer/-/jobs/artifacts/dev/raw/build/libs/ReefSeichi-1.0-SNAPSHOT-all.jar?job=build_job_1")
+        val url =  URL("https://gitlab.com/Ree-jp/ReefSeichi/-/jobs/artifacts/dev/raw/build/libs/ReefSeichi-1.0-SNAPSHOT-all.jar?job=build_job_1")
         val dlPath: String = url.path
         val name = dlPath.substring(dlPath.lastIndexOf("/") + 1)
         var size = 0
