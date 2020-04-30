@@ -22,6 +22,8 @@ dependencies {
     testCompileOnly("cn.nukkit:nukkit:1.0-SNAPSHOT")
     implementation(kotlin("stdlib-jdk8"))
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5")
+    implementation("com.google.code.gson:gson:2.8.6")
+    implementation("net.lingala.zip4j:zip4j:2.5.2")
 }
 
 configure<JavaPluginConvention> {
