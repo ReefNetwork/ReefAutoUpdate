@@ -15,6 +15,9 @@ repositories {
     maven(
         url = uri("https://repo.nukkitx.com/main/")
     )
+    maven(
+        url = uri("https://www.jitpack.io")
+    )
 }
 
 dependencies {
@@ -22,8 +25,8 @@ dependencies {
     testCompileOnly("cn.nukkit:nukkit:1.0-SNAPSHOT")
     implementation(kotlin("stdlib-jdk8"))
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5")
-    implementation("com.google.code.gson:gson:2.8.6")
     implementation("net.lingala.zip4j:zip4j:2.5.2")
+    implementation("com.github.Ree-jp:GIthub-artifacts-url:1.0.1")
 }
 
 configure<JavaPluginConvention> {
