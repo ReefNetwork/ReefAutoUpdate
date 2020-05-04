@@ -22,5 +22,5 @@ jobs:
         
     - uses: actions/upload-artifact@v1
       with:
-        name: ReefAutoUpdate.jar
+        name: ReefAutoUpdateArtifact
         path: build/libs
